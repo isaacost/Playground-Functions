@@ -30,7 +30,7 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = (3 * wins) + (1 * ties);
-  
+
   return pontos;
 }
 
@@ -39,7 +39,7 @@ function highestCount(array) {
   let maiorNumero = Math.max.apply(null, array);
   let contador = 0;
 
-  for (let i = 0; i < array.length; i += 1){
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] === maiorNumero) {
       contador += 1;
     }
@@ -65,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let resultado = [];
 
-  for (let i = 0; i < array.length; i += 1){
+  for (let i = 0; i < array.length; i += 1) {
     if ((array[i] % 3 === 0) && (array[i] % 5 === 0)) {
       resultado.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
@@ -80,11 +80,46 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let resultado = '';
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === 'a') {
+      resultado += '1';
+    } else if (string[i] === 'e') {
+      resultado += '2';
+    } else if (string[i] === 'i') {
+      resultado += '3';
+    } else if (string[i] === 'o') {
+      resultado += '4';
+    } else if (string[i] === 'u') {
+      resultado += '5';
+    } else {
+      resultado += string[i];
+    }
+  }
+  return resultado;
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode('hello'));
+
+function decode(string) {
+  let resultado = '';
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === '1') {
+      resultado += 'a';
+    } else if (string[i] === '2') {
+      resultado += 'e';
+    } else if (string[i] === '3') {
+      resultado += 'i';
+    } else if (string[i] === '4') {
+      resultado += 'o';
+    } else if (string[i] === '5') {
+      resultado += 'u';
+    } else {
+      resultado += string[i];
+    }
+  }
+  return resultado;
 }
 
 // Desafio 10
