@@ -100,7 +100,6 @@ function encode(string) {
   return resultado;
 }
 
-console.log(encode('hello'));
 
 function decode(string) {
   let resultado = '';
@@ -123,8 +122,18 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, string) {
+  let resultado = [];
+  let arrayOrdenado = array.sort();
+
+  if (array.length === 0) {
+    resultado = 'Vazio!'
+  } else {
+    for (let i = 0; i < array.length; i += 1) {
+resultado.push({tech: arrayOrdenado[i], name: string})
+    }
+  }
+  return resultado;
 }
 
 module.exports = {
