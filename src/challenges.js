@@ -22,7 +22,8 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(array) {
   let indice = array.length;
-  let resultado = (array[indice - 1] + ', ' + array[0]);
+  let resultado;
+  resultado = (array[indice - 1] + ', ' + array[0]);
 
   return resultado;
 }
@@ -54,7 +55,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
-  } else if (distanciaCat2 < distanciaCat1) {
+  } if (distanciaCat2 < distanciaCat1) {
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
@@ -100,7 +101,6 @@ function encode(string) {
   return resultado;
 }
 
-
 function decode(string) {
   let resultado = '';
   for (let i = 0; i < string.length; i += 1) {
@@ -127,10 +127,10 @@ function techList(array, string) {
   let arrayOrdenado = array.sort();
 
   if (array.length === 0) {
-    resultado = 'Vazio!'
+    resultado = 'Vazio!';
   } else {
     for (let i = 0; i < array.length; i += 1) {
-resultado.push({tech: arrayOrdenado[i], name: string})
+      resultado.push({ tech: arrayOrdenado[i], name: string });
     }
   }
   return resultado;
